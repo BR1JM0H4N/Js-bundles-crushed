@@ -1,1 +1,263 @@
-_='(()=>{e*div");e~posifixed/e~bottom20e~left50%/etranslateX(-50%)/e~width95vw/e~maxWidth600e~backgroundlinear-gradi(145deg, #1e1e2f, #2a2a3a)/e16e16ee~flexDireccolumn/e~zIndex=999999,e10px 304)/e~color#f5f5f5/e~fontFamily=`"Segoe UI/ sans-serif`,ee~touchAcnone";t*div");ttt~marginBottom12t~cursorgrab/t4px 8t10t05)/t~backdropFilterblur(8px)";s*div");s.textContQuick Comm Panel:/s~fontW600/s~fontSize16s~flex1 1 auto/ts);l*button");l.textCont×/l.titleClose panel/l1)/l~bordernone/l~color#f5f5f5/l~fontSize20l~cursorpointer/ll0/l~flex0 0 auto/l~lineH1/l~marginLeftauto/l~width32l~h32l50%/lll~justifyContcer/l~transiall 0.2s ease/l~marginLeft12ldown/(e=>e.stopPropaga())),l|touchstart/(e=>e.stopPropaga())),l|click/(()=>e.remove())),ler/(()=>{l2)/lscale(1.1)"})),lleave/(()=>{l1)/lscale(1)"})),tl),et);n*div");nn~overflowXauto/n~gap12n8px 0/n~scrollBehaviorsmooth/n~posirelative/n~minH56nn~webkitOverflowScrollingtouch";o=["#ff6b6b/"#4ecdc4/"#45b7d1/"#96ce8c/"#ffe66d"];[_<^/ 🐱_ 🐈 🐱< 🐈‍⬛^ 🐱 🐈 🐱 🐈‍⬛🐱 🐈/ 🐰🌕_ 🌕🐇 🐰🌝< 🌕🐰^ 🐇🌕 🌝🐰 🐰🌕 🌕🐇🐰🌝 🐇🌕/_<^🐺"].forEach(((e,t)=>{s*button");s.textCont=e,s~flex0 0 auto/s12px 20s~bordernone/s25s~background=o[t%o.length],s~color#1a1a1a/s~fontSize15s~fontW500/s~cursorpointer/ss~whiteSpacenowrap/s~transiall 0.3s ease/s4px 102)/s~posirelative/ser/(()=>{stranslateY(-2px)/s6px 153)"})),sleave/(()=>{stranslateY(0)/s4px 102)"})),s|click/(()=>async func(e){decodeURICompon(escape(atob("ICBjb25zdCBsaWtlQnV0dG9uID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcignYnV0dG9uW3RpdGxlPSJMaWtlIl0nKTsKIGlmIChsaWtlQnV0dG9uKSB7IGxpa2VCdXR0b24uZGlzcGF0Y2hFdmVudChuZXcgTW91c2VFdmVudCgnY2xpY2snLCB7IGJ1YmJsZXM6IHRydWUsIGNhbmNlbGFibGU6IHRydWUsIHZpZXc6IHdpbmRvdyB9KSk7IGNvbnNvbGUubG9nKCLinaTvuI8gTGlrZSBjbGlja2VkIik7ICB9IGVsc2UgewogICBjb25zb2xlLndhcm4oIuKdjCBMaWtlIGJ1dHRvbiBub3QgZm91bmQiKTsKIH0KIGF3YWl0IGRlbGF5KDIwMCk7CgogY29uc3Qgd	gPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKCd0ZXh0YXJlYVtwbGFjZWhvbGRlcj0iV2hhdCBkbyB5b3UgbGlrZSBhYm91dCB0aGlzIGNyZWF0aW9uPyJdJyk7ICBpZiAod	pIHsKY29uc3QgbmF0aXZlU2V0dGVyID0gT2JqZWN0LmdldE93blByb3BlcnR5RGVzY3JpcHRvcih3aW5kb3cuSFRNTFRleHRBcmVhRWxlbWVudC5wcm90b3R5cGUsICd2YWx1ZScpLnNldDsKbmF0aXZlU2V0dGVyLmNhbGwod	sIGNvbW1lbnRUZXh0KTsKd	uZGlzcGF0Y2hFdmVudChuZXcgRXZlbnQoJ2lucHV0JywgeyBidWJibGVzOiB0cnVlIH0pKTsKY29uc29sZS5sb2coIvCfk50gV	gZmlsbGVkOiIsIGNvbW1lbnRUZXh0RleHRhcmVhIG5vdCBmb3VuZCIpOwogfQogYXdhaXQgZGVsYXkoMjAwKTsKICBjb25zdCBidXR0b25zID0gWy4uLmRvY3VtZW50LnF1ZXJ5U2VsZWN0b3JBbGwoJ2J1dHRvbicpXTsKIGNvbnN0IHN1Ym1pdEJ1dHRvbiA9IGJ1dHRvbnMuZmluZChiID0+IGIudGV4dENvbnRlbnQudHJpbSgpID09PSAnU3VibWl0Jyk7ICBpZiAoc3VibWl0QnV0dG9uKSB7IHN1Ym1pdEJ1dHRvbi5kaXNwYXRjaEV2ZW50KG5ldyBNb3VzZUV2ZW50KCdjbGljaycsIHsgYnViYmxlczogdHJ1ZSwgY2FuY2VsYWJsZTogdHJ1ZSwgdmlldzogd2luZG93IH0pKTsKY29uc29sZS5sb2coIvCfmoAgU3VibWl0IGNsaWNrZWQiN1Ym1pdCBidXR0b24gbm90IGZvdW5kIik7ICB9")))}())),ns)})),en);i=n.querySelector("button");if(i){s=i.offsetH;e~h=`calc(${s+t.offsetH+32}px + 1em)`}let d,a,r,y,c=!1;func u(t){if(t.target.closest("button")===l)return;t.prevDefault(),c=!0,d@X:t.cliX,a@Y:t.cliY;s=e.getBoundingCliRect();r=s.left,y=s.top,e~transinone/e~posifixed/e~bottomauto/enone"}func g(t){if(!c)return;s@X:t.cliX,l@Y:t.cliY;let n=r+(s-d),o=y+(l-a);i=window.innerWidth-e.offsetWidth,u=window.innerH-e.offsetH;n=Math.min(Math.max(n,0),i),o=Math.min(Math.max(o,0),u),e~left=n+"e~top=o+"px"}func b(){c&&(c=!1,e~transi")}tdown/u),windowmove/g),windowup/b),t|touchstart/u,{passive:!1}),window|touchmove/g,{passive:!1}),window|touchend/b),docum.bodye)})();~.style.|.addEvListener("_/"(⁠◍⁠•⁠ᴗ⁠•⁠◍⁠)⁠❤ very pretty^/"So radiant and beautiful ε(´｡•᎑•`)っ 💕@=t.type.startsWith("touch")?t.touches[0].cli</"Absolutely mesmerizing! (∩˃o˂∩)❤️/",*=docum.createElem("/"(∩˃o˂∩)❤️✨super cuteeeee~backgroundrgba(255,255,255,0./"꒰ঌ😇👌໒꒱ perfect=""❤️😇 very beautifulICAg/" very charming 😍💛/"very cute 🥰 🥰 .appendChild(/"✨🤩 mesmerizing/"absolutely adorableconst ~transformKTsKIH0gZWxzZSB7IGNvbnNvbGUud2Fybigi4p2MIFenttionpx rgba(0,0,0,0.~borderRadius~displayflex/eight	GV4dGFyZWE~boxShadow0 |mousepx/ 🐺~padding~userSelectnone/~alignItemscer/CiAg';for(i of'	*/<@^_|~')with(_.split(i))_=join(pop());eval(_)
+(() => {
+  const comments = [
+  "❤️😇 very beautiful",
+  "(⁠◍⁠•⁠ᴗ⁠•⁠◍⁠)⁠❤ very pretty",
+  "✨🤩 mesmerizing",
+  "Absolutely mesmerizing! (∩˃o˂∩)❤️",
+  "So radiant and beautiful ε(´｡•᎑•`)っ 💕",
+  " very charming 😍💛",
+  "(∩˃o˂∩)❤️✨super cuteeeee",
+  "꒰ঌ😇👌໒꒱ perfect",
+  "very cute 🥰 🥰 ",
+  "absolutely adorable",
+  "❤️😇 very beautiful 🐱",  
+  "(⁠◍⁠•⁠ᴗ⁠•⁠◍⁠)⁠❤ very pretty 🐈",  
+  "✨🤩 mesmerizing 🐱",  
+  "Absolutely mesmerizing! (∩˃o˂∩)❤️ 🐈‍⬛",  
+  "So radiant and beautiful ε(´｡•᎑•`)っ 💕 🐱",  
+  " very charming 😍💛 🐈",  
+  "(∩˃o˂∩)❤️✨super cuteeeee 🐱",  
+  "꒰ঌ😇👌໒꒱ perfect 🐈‍⬛",  
+  "very cute 🥰 🥰 🐱",  
+  "absolutely adorable 🐈",
+  "❤️😇 very beautiful 🐰🌕",  
+  "(⁠◍⁠•⁠ᴗ⁠•⁠◍⁠)⁠❤ very pretty 🌕🐇",  
+  "✨🤩 mesmerizing 🐰🌝",  
+  "Absolutely mesmerizing! (∩˃o˂∩)❤️ 🌕🐰",  
+  "So radiant and beautiful ε(´｡•᎑•`)っ 💕 🐇🌕",  
+  " very charming 😍💛 🌝🐰",  
+  "(∩˃o˂∩)❤️✨super cuteeeee 🐰🌕",  
+  "꒰ঌ😇👌໒꒱ perfect 🌕🐇",  
+  "very cute 🥰 🥰 🐰🌝",  
+  "absolutely adorable 🐇🌕",
+ "❤️😇 very beautiful 🐺",  
+  "(⁠◍⁠•⁠ᴗ⁠•⁠◍⁠)⁠❤ very pretty 🐺",  
+  "✨🤩 mesmerizing 🐺",  
+  "Absolutely mesmerizing! (∩˃o˂∩)❤️ 🐺",  
+  "So radiant and beautiful ε(´｡•᎑•`)っ 💕 🐺",  
+  " very charming 😍💛 🐺",  
+  "(∩˃o˂∩)❤️✨super cuteeeee 🐺",  
+  "꒰ঌ😇👌໒꒱ perfect 🐺",  
+  "very cute 🥰 🥰 🐺",  
+  "absolutely adorable 🐺"
+];
+
+  // Create main panel container
+  const panel = document.createElement('div');
+  panel.style.position = 'fixed';
+  panel.style.bottom = '20px';
+  panel.style.left = '50%';
+  panel.style.transform = 'translateX(-50%)';
+  panel.style.width = '95vw';
+  panel.style.maxWidth = '600px';
+  panel.style.background = 'linear-gradient(145deg, #1e1e2f, #2a2a3a)';
+  panel.style.borderRadius = '16px';
+  panel.style.padding = '16px';
+  panel.style.display = 'flex';
+  panel.style.flexDirection = 'column';
+  panel.style.zIndex = 999999;
+  panel.style.boxShadow = '0 10px 30px rgba(0,0,0,0.4)';
+  panel.style.color = '#f5f5f5';
+  panel.style.fontFamily = '"Segoe UI", sans-serif';
+  panel.style.userSelect = 'none';
+  panel.style.touchAction = 'none';
+
+  // Create top bar (title + close button)
+  const topBar = document.createElement('div');
+  topBar.style.display = 'flex';
+  topBar.style.alignItems = 'center';
+  topBar.style.marginBottom = '12px';
+  topBar.style.cursor = 'grab';
+  topBar.style.padding = '4px 8px';
+  topBar.style.borderRadius = '10px';
+  topBar.style.background = 'rgba(255,255,255,0.05)';
+  topBar.style.backdropFilter = 'blur(8px)';
+
+  const title = document.createElement('div');
+  title.textContent = 'Quick Comment Panel:';
+  title.style.fontWeight = '600';
+  title.style.fontSize = '16px';
+  title.style.flex = '1 1 auto';
+  topBar.appendChild(title);
+
+  const closeBtn = document.createElement('button');
+  closeBtn.textContent = '×';
+  closeBtn.title = 'Close panel';
+  closeBtn.style.background = 'rgba(255,255,255,0.1)';
+  closeBtn.style.border = 'none';
+  closeBtn.style.color = '#f5f5f5';
+  closeBtn.style.fontSize = '20px';
+  closeBtn.style.cursor = 'pointer';
+  closeBtn.style.userSelect = 'none';
+  closeBtn.style.padding = '0';
+  closeBtn.style.flex = '0 0 auto';
+  closeBtn.style.lineHeight = '1';
+  closeBtn.style.marginLeft = 'auto';
+  closeBtn.style.width = '32px';
+  closeBtn.style.height = '32px';
+  closeBtn.style.borderRadius = '50%';
+  closeBtn.style.display = 'flex';
+  closeBtn.style.alignItems = 'center';
+  closeBtn.style.justifyContent = 'center';
+  closeBtn.style.transition = 'all 0.2s ease';
+  closeBtn.style.marginLeft = '12px';
+
+  closeBtn.addEventListener('mousedown', e => e.stopPropagation());
+  closeBtn.addEventListener('touchstart', e => e.stopPropagation());
+  closeBtn.addEventListener('click', () => panel.remove());
+  closeBtn.addEventListener('mouseenter', () => {
+    closeBtn.style.background = 'rgba(255,255,255,0.2)';
+    closeBtn.style.transform = 'scale(1.1)';
+  });
+  closeBtn.addEventListener('mouseleave', () => {
+    closeBtn.style.background = 'rgba(255,255,255,0.1)';
+    closeBtn.style.transform = 'scale(1)';
+  });
+
+  topBar.appendChild(closeBtn);
+  panel.appendChild(topBar);
+
+  // Create scrollable buttons container
+  const btnContainer = document.createElement('div');
+  btnContainer.style.display = 'flex';
+  btnContainer.style.overflowX = 'auto';
+  btnContainer.style.gap = '12px';
+  btnContainer.style.padding = '8px 0';
+  btnContainer.style.scrollBehavior = 'smooth';
+  btnContainer.style.position = 'relative';
+  btnContainer.style.minHeight = '56px'; // ✅ Fixed height for button visibility
+  btnContainer.style.alignItems = 'center';
+  btnContainer.style.webkitOverflowScrolling = 'touch';
+
+  const delay = ms => new Promise(res => setTimeout(res, ms));
+
+  async function performAction(commentText) {
+    const likeButton = document.querySelector('button[title="Like"]');
+    if (likeButton) {
+      likeButton.dispatchEvent(new MouseEvent('click', { bubbles: true, cancelable: true, view: window }));
+      console.log("❤️ Like clicked");
+    } else {
+      console.warn("❌ Like button not found");
+    }
+    await delay(200);
+
+    const textarea = document.querySelector('textarea[placeholder="What do you like about this creation?"]');
+    if (textarea) {
+      const nativeSetter = Object.getOwnPropertyDescriptor(window.HTMLTextAreaElement.prototype, 'value').set;
+      nativeSetter.call(textarea, commentText);
+      textarea.dispatchEvent(new Event('input', { bubbles: true }));
+      console.log("📝 Textarea filled:", commentText);
+    } else {
+      console.warn("❌ Textarea not found");
+    }
+    await delay(200);
+
+    const buttons = [...document.querySelectorAll('button')];
+    const submitButton = buttons.find(b => b.textContent.trim() === 'Submit');
+    if (submitButton) {
+      submitButton.dispatchEvent(new MouseEvent('click', { bubbles: true, cancelable: true, view: window }));
+      console.log("🚀 Submit clicked");
+    } else {
+      console.warn("❌ Submit button not found");
+    }
+  }
+
+  const buttonColors = ['#ff6b6b', '#4ecdc4', '#45b7d1', '#96ce8c', '#ffe66d'];
+  comments.forEach((text, index) => {
+    const btn = document.createElement('button');
+    btn.textContent = text;
+    btn.style.flex = '0 0 auto';
+    btn.style.padding = '12px 20px';
+    btn.style.border = 'none';
+    btn.style.borderRadius = '25px';
+    btn.style.background = buttonColors[index % buttonColors.length];
+    btn.style.color = '#1a1a1a';
+    btn.style.fontSize = '15px';
+    btn.style.fontWeight = '500';
+    btn.style.cursor = 'pointer';
+    btn.style.userSelect = 'none';
+    btn.style.whiteSpace = 'nowrap';
+    btn.style.transition = 'all 0.3s ease';
+    btn.style.boxShadow = '0 4px 10px rgba(0,0,0,0.2)';
+    btn.style.position = 'relative';
+
+    btn.addEventListener('mouseenter', () => {
+      btn.style.transform = 'translateY(-2px)';
+      btn.style.boxShadow = '0 6px 15px rgba(0,0,0,0.3)';
+    });
+    btn.addEventListener('mouseleave', () => {
+      btn.style.transform = 'translateY(0)';
+      btn.style.boxShadow = '0 4px 10px rgba(0,0,0,0.2)';
+    });
+
+    btn.addEventListener('click', () => performAction(text));
+    btnContainer.appendChild(btn);
+  });
+
+  panel.appendChild(btnContainer);
+
+  // Set height dynamically (optional/fallback)
+  const firstBtn = btnContainer.querySelector('button');
+  if (firstBtn) {
+    const btnHeight = firstBtn.offsetHeight;
+    panel.style.height = `calc(${btnHeight + topBar.offsetHeight + 32}px + 1em)`;
+  }
+
+  // Dragging logic
+  let isDragging = false;
+  let startX, startY, startLeft, startTop;
+
+  function onDragStart(e) {
+    if (e.target.closest('button') === closeBtn) return;
+    e.preventDefault();
+    isDragging = true;
+    startX = e.type.startsWith('touch') ? e.touches[0].clientX : e.clientX;
+    startY = e.type.startsWith('touch') ? e.touches[0].clientY : e.clientY;
+
+    const rect = panel.getBoundingClientRect();
+    startLeft = rect.left;
+    startTop = rect.top;
+
+    panel.style.transition = 'none';
+    panel.style.position = 'fixed';
+    panel.style.bottom = 'auto';
+    panel.style.transform = 'none';
+  }
+
+  function onDragMove(e) {
+    if (!isDragging) return;
+    const currentX = e.type.startsWith('touch') ? e.touches[0].clientX : e.clientX;
+    const currentY = e.type.startsWith('touch') ? e.touches[0].clientY : e.clientY;
+
+    let dx = currentX - startX;
+    let dy = currentY - startY;
+
+    let newLeft = startLeft + dx;
+    let newTop = startTop + dy;
+
+    const maxX = window.innerWidth - panel.offsetWidth;
+    const maxY = window.innerHeight - panel.offsetHeight;
+
+    newLeft = Math.min(Math.max(newLeft, 0), maxX);
+    newTop = Math.min(Math.max(newTop, 0), maxY);
+
+    panel.style.left = newLeft + 'px';
+    panel.style.top = newTop + 'px';
+  }
+
+  function onDragEnd() {
+    if (isDragging) {
+      isDragging = false;
+      panel.style.transition = '';
+    }
+  }
+
+  topBar.addEventListener('mousedown', onDragStart);
+  window.addEventListener('mousemove', onDragMove);
+  window.addEventListener('mouseup', onDragEnd);
+  topBar.addEventListener('touchstart', onDragStart, { passive: false });
+  window.addEventListener('touchmove', onDragMove, { passive: false });
+  window.addEventListener('touchend', onDragEnd);
+
+  document.body.appendChild(panel);
+})();
