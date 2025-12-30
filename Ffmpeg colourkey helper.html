@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Color Inspector + 3D Chroma Key</title>
+
+<style>
+:root {
+--bg-color: #0f172a;
+--card-bg: #1e293b;
+--accent: #38bdf8;
+--text-main: #f8fafc;
+--text-dim: #94a3b8;
+}
+
+* { box-sizing: border-box;
+}
+
+body {
+font-family: system-ui, -apple-system, sans-serif;
+background: var(--bg-color);
+color: var(--text-main);
+margin: 0;
+padding: 1rem;
+}
+
+h1 {
+text-align: center;
+margin-bottom: 1.5rem;
+}
+
+.container {
+max-width: 1200px;
+margin: auto;
+display: grid;
+grid-template-columns: 1fr 340px;
+gap: 1.5rem;
+}
+
+.canvas-container {
+background: var(--card-bg);
+border-radius: 12px;
+padding: 1rem;
+border: 2px dashed #334155;
+display: flex;
+flex-direction: column;
+gap: 1rem;
+justify-content: center;
+align-items: center;
+min-height: 300px;
+position: relative;
+}
+
+canvas {
+max-width: 100%;
+max-height: 70vh;
+border-radius: 6px;
+cursor: crosshair;
+}
+
+#previewCanvas {
+background: repeating-conic-gradient(#444 0% 25%, #222 0% 50%) 50% / 20px 20px;
+}
+
+#placeholder {
+position: absolute;
+color: var(--text-dim);
+pointer-events: none;
+}
+
+.controls {
+background: var(--card-bg);
+padding: 1.25rem;
+border-radius: 12px;
+display: flex;
+flex-direction: column;
+gap: 1rem;
+}
+
+.upload-btn {
+background: var(--accent);
+color: var(--bg-color);
+padding: 0.8rem;
+border-radius: 8px;
+text-align: center;
+font-weight: 700;
+cursor: pointer;
+}
+
+#imageInput { display: none;
+}
+
+.color-preview {
+height: 60px;
+border-radius: 8px;
+border: 1px solid #334155;
+}
+
+.result-item {
+background: #020617;
+padding: 0.75rem;
+border-radius: 8px;
+border-left: 4px solid var(--accent);
+}
+
+.label {
+font-size: 0.7rem;
+color: var(--text-dim);
+text-transform: uppercase;
+display: flex;
+justify-content: space-between;
+}
+
+.value {
+font-family: monospace;
+font-size: 0.8rem;
+margin-top: 0.25rem;
+word-break: break-all;
+color: #cbd5e1;
+}
+
+input[type="range"] {
+width: 100%;
+margin-top: 5px;
+}
+
+@media (max-width: 900px) {
+.container { grid-template-columns: 1fr;
+}
+canvas { max-height: 45vh;
+}
+}
+</style>
+</head>
+
+<body>
+
+<h1>Color Inspector + Chroma Key Preview</h1>
+
+<div class="container">
+<div class="canvas-container">
+<canvas id="canvas"></canvas>
+<canvas id="previewCanvas"></canvas>
+<div id="placeholder">
+Upload an image to begin
+</div>
+</div>
+
+<aside class="controls">
+<label class="upload-btn">
+SELECT IMAGE
+<input type="file" id="imageInput" accept="image/*" />
+</label>
+
+<div id="previewBox" class="color-preview"></div>
+
+<div class="result-item">
+<div class="label">
+Similarity <span id="simVal">0.030</span>
+</div>
+<input type="range" id="similarity" min="0" max="1" step="0.001" value="0.030">
+</div>
+
+<div class="result-item">
+<div class="label">
+Calibration <span id="lumVal">1.06</span>
+</div>
+<input type="range" id="lumWeight" min="0" max="2" step="0.01" value="1.06">
+</div>
+
+<div class="result-item" hidden>
+<div class="label">
+Blend <span id="blendVal">0.00</span>
+</div>
+<input type="range" id="blend" min="0" max="1" step="0.01" value="0.0">
+</div>
+
+<div class="result-item">
+<div class="label">
+HEX
+</div>
+<div class="value" id="hexVal">
+#------
+</div>
+</div>
+
+<div class="result-item">
+<div class="label">
+FFmpeg Command (Precise)
+</div>
+<div class="value" id="ffmpegCmd"></div>
+</div>
+
+<div class="result-item">
+<div class="label">
+RGB
+</div>
+<div class="value" id="rgbVal">
+rgb(0, 0, 0)
+</div>
+</div>
+
+<div class="result-item">
+<div class="label">
+HSL
+</div>
+<div class="value" id="hslVal">
+hsl(0, 0%, 0%)
+</div>
+</div>
+</aside>
+</div>
+
+<script>
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d", { willReadFrequently: true });
+const previewCanvas = document.getElementById("previewCanvas");
+const pctx = previewCanvas.getContext("2d", { willReadFrequently: true });
+
+const imageInput = document.getElementById("imageInput");
+const placeholder = document.getElementById("placeholder");
+const hexVal = document.getElementById("hexVal");
+const rgbVal = document.getElementById("rgbVal");
+const hslVal = document.getElementById("hslVal");
+const previewBox = document.getElementById("previewBox");
+
+const similaritySlider = document.getElementById("similarity");
+const lumSlider = document.getElementById("lumWeight");
+const blendSlider = document.getElementById("blend");
+
+const simValDisplay = document.getElementById("simVal");
+const lumValDisplay = document.getElementById("lumVal");
+const blendValDisplay = document.getElementById("blendVal");
+const ffmpegCmd = document.getElementById("ffmpegCmd");
+
+let img = new Image();
+let keyColor = { r: 0, g: 0, b: 0 };
+
+function rgbToYCbCr(r, g, b) {
+const y = 0.299 * r + 0.587 * g + 0.114 * b;
+const cb = -0.168736 * r - 0.331264 * g + 0.5 * b + 128;
+const cr = 0.5 * r - 0.418688 * g - 0.081312 * b + 128;
+return { y, cb, cr };
+}
+
+imageInput.addEventListener("change", e => {
+const file = e.target.files[0];
+if (!file) return;
+img.onload = () => {
+canvas.width = previewCanvas.width = img.width;
+canvas.height = previewCanvas.height = img.height;
+ctx.drawImage(img, 0, 0);
+placeholder.style.display = "none";
+updatePreview();
+};
+img.src = URL.createObjectURL(file);
+});
+
+canvas.addEventListener("mousedown", e => pickColor(e.clientX, e.clientY));
+canvas.addEventListener("touchstart", e => {
+const t = e.touches[0];
+pickColor(t.clientX, t.clientY);
+});
+
+function pickColor(clientX, clientY) {
+const rect = canvas.getBoundingClientRect();
+const scaleX = canvas.width / rect.width;
+const scaleY = canvas.height / rect.height;
+const x = Math.floor((clientX - rect.left) * scaleX);
+const y = Math.floor((clientY - rect.top) * scaleY);
+if (x < 0 || y < 0 || x >= canvas.width || y >= canvas.height) return;
+
+const [r, g, b] = ctx.getImageData(x, y, 1, 1).data;
+keyColor = { r, g, b };
+updateUI();
+}
+
+function updateUI() {
+const hex = rgbToHex(keyColor.r, keyColor.g, keyColor.b);
+hexVal.textContent = hex.toUpperCase();
+rgbVal.textContent = `rgb(${keyColor.r}, ${keyColor.g}, ${keyColor.b})`;
+hslVal.textContent = rgbToHsl(keyColor.r, keyColor.g, keyColor.b);
+previewBox.style.background = hex;
+updatePreview();
+}
+
+function updatePreview() {
+if (!canvas.width) return;
+
+const sim = parseFloat(similaritySlider.value);
+const lumWeight = parseFloat(lumSlider.value);
+const blend = parseFloat(blendSlider.value);
+
+simValDisplay.textContent = sim.toFixed(3);
+lumValDisplay.textContent = lumWeight.toFixed(2);
+blendValDisplay.textContent = blend.toFixed(2);
+
+const imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+const data = imgData.data;
+const keyYCbCr = rgbToYCbCr(keyColor.r, keyColor.g, keyColor.b);
+
+for (let i = 0; i < data.length; i += 4) {
+const pxYCbCr = rgbToYCbCr(data[i], data[i + 1], data[i + 2]);
+
+const dY = (pxYCbCr.y - keyYCbCr.y) / 255;
+const dCb = (pxYCbCr.cb - keyYCbCr.cb) / 255;
+const dCr = (pxYCbCr.cr - keyYCbCr.cr) / 255;
+
+// The 3D distance formula
+const dist = Math.sqrt(Math.pow(dY * lumWeight, 2) + Math.pow(dCb, 2) + Math.pow(dCr, 2));
+
+if (dist < sim) {
+let alpha = 0;
+if (blend > 0) {
+alpha = Math.min(1, dist / Math.max(blend, 0.001));
+}
+data[i + 3] = alpha * 255;
+}
+}
+
+pctx.putImageData(imgData, 0, 0);
+updateFFmpegCommand();
+}
+
+similaritySlider.addEventListener("input", updatePreview);
+lumSlider.addEventListener("input", updatePreview);
+blendSlider.addEventListener("input", updatePreview);
+
+function updateFFmpegCommand() {
+const hex = rgbToHex(keyColor.r, keyColor.g, keyColor.b).replace("#", "0x");
+const sim = similaritySlider.value;
+const bld = blendSlider.value;
+const lum = lumSlider.value;
+
+// When Luminance Sensitivity is high, we use colorkey (RGB distance)
+// When it's low, we use chromakey (YUV distance)
+if (parseFloat(lum) > 0.5) {
+ffmpegCmd.textContent = `-filter_complex "[0:v] colorkey=${hex}:${sim}:${bld},format=rgba,split [rgb][a]; [a] alphaextract,boxblur=3:3 [alpha]; [rgb][alpha] alphamerge,split [v][p]; [p] palettegen=stats_mode=diff [pal]; [v][pal] paletteuse=dither=bayer:bayer_scale=5"`;
+} else {
+ffmpegCmd.textContent = `-filter_complex "[0:v] chromakey=${hex}:${sim}:${bld}, format=rgba, split [v][p]; [p] palettegen [pal]; [v][pal] paletteuse"`;
+}
+}
+
+function rgbToHex(r, g, b) {
+return "#" + [r, g, b].map(v => v.toString(16).padStart(2, "0")).join("");
+}
+
+function rgbToHsl(r, g, b) {
+r /= 255; g /= 255; b /= 255;
+const max = Math.max(r, g, b), min = Math.min(r, g, b);
+let h = 0, s = 0, l = (max + min) / 2;
+if (max !== min) {
+const d = max - min;
+s = l > 0.5 ? d / (2 - max - min): d / (max + min);
+switch (max) {
+case r: h = (g - b) / d + (g < b ? 6: 0); break;
+case g: h = (b - r) / d + 2; break;
+case b: h = (r - g) / d + 4;
+}
+h /= 6;
+}
+return `hsl(${Math.round(h * 360)}, ${Math.round(s * 100)}%, ${Math.round(l * 100)}%)`;
+}
+</script>
+</body>
+</html>
