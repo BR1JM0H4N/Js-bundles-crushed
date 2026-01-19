@@ -275,7 +275,7 @@
                         panelTitle.innerText = "Quick Comment & Auto-Like"; 
                         panelTitle.style.color = "#fff";
                         loadCurrentLink();
-                    }, 1000);
+                    }, 2000);
                 } else {
                     console.warn("Submit button not found");
                 }
