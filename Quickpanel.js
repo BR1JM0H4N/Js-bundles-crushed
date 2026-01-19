@@ -15,6 +15,8 @@
         "https://creator.nightcafe.studio/u/AzdSAM",
         "https://creator.nightcafe.studio/u/Lethalbiscuit",
         "https://creator.nightcafe.studio/u/Novinci",
+        "https://creator.nightcafe.studio/u/Tigapup",
+        "https://creator.nightcafe.studio/u/NekoYo",
         "https://creator.nightcafe.studio/u/Tara618",
         "https://creator.nightcafe.studio/u/Megansamantha"
     ];
