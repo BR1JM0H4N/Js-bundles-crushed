@@ -221,7 +221,7 @@
         commentPanel.appendChild(panelTitle);
 
         const btnContainer = document.createElement('div');
-        btnContainer.style = "display: flex; overflow-x: auto; gap: 8px; padding-bottom: 5px; justify-content: center;";
+        btnContainer.style = "display: flex; overflow-x: auto; gap: 8px; padding-bottom: 5px; justify-content: flex-start;";
         
         const delay = ms => new Promise(res => setTimeout(res, ms));
 
