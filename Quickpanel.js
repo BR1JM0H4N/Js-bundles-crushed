@@ -20,10 +20,51 @@
     ];
     
     const comments = [
-        "❤️😇 very beautiful",
-        "(⁠◍⁠•⁠ᴗ⁠•⁠◍⁠)⁠❤ very pretty",
-        "✨🤩 mesmerizing"
-    ];
+  "❤️😇 very beautiful",
+  "(⁠◍⁠•⁠ᴗ⁠•⁠◍⁠)⁠❤ very pretty",
+  "✨🤩 mesmerizing",
+  "Absolutely mesmerizing! (∩˃o˂∩)❤️",
+  "So radiant and beautiful ε(´｡•᎑•`)っ 💕",
+  " very charming 😍💛",
+  "(∩˃o˂∩)❤️✨super cuteeeee",
+  "꒰ঌ😇👌໒꒱ perfect",
+   "P𝗲𝗿𝗳𝗲𝗰𝘁!🎀",
+  "ദ്ദി(˵ •̀ ᴗ - ˵ ) ✨ PERFECTION",
+ "꧁⎝ 𓆩༺COOL༻𓆪 ⎠꧂",
+  "..VERY PRETTY𓂃 ࣪ ִֶָ🦋་༘࿐",
+  "very cute 🥰 🥰 ",
+  "absolutely adorable",
+  "❤️😇 very beautiful 🐱",  
+  "(⁠◍⁠•⁠ᴗ⁠•⁠◍⁠)⁠❤ very pretty 🐈",  
+  "✨🤩 mesmerizing 🐱",  
+  "Absolutely mesmerizing! (∩˃o˂∩)❤️ 🐈‍⬛",  
+  "So radiant and beautiful ε(´｡•᎑•`)っ 💕 🐱",  
+  " very charming 😍💛 🐈",  
+  "(∩˃o˂∩)❤️✨super cuteeeee 🐱",  
+  "꒰ঌ😇👌໒꒱ perfect 🐈‍⬛",  
+  "very cute 🥰 🥰 🐱",  
+  "absolutely adorable 🐈",
+  "❤️😇 very beautiful 🐰🌕",  
+  "(⁠◍⁠•⁠ᴗ⁠•⁠◍⁠)⁠❤ very pretty 🌕🐇",  
+  "✨🤩 mesmerizing 🐰🌝",  
+  "Absolutely mesmerizing! (∩˃o˂∩)❤️ 🌕🐰",  
+  "So radiant and beautiful ε(´｡•᎑•`)っ 💕 🐇🌕",  
+  " very charming 😍💛 🌝🐰",  
+  "(∩˃o˂∩)❤️✨super cuteeeee 🐰🌕",  
+  "꒰ঌ😇👌໒꒱ perfect 🌕🐇",  
+  "very cute 🥰 🥰 🐰🌝",  
+  "absolutely adorable 🐇🌕",
+ "❤️😇 very beautiful 🐺",  
+  "(⁠◍⁠•⁠ᴗ⁠•⁠◍⁠)⁠❤ very pretty 🐺",  
+  "✨🤩 mesmerizing 🐺",  
+  "Absolutely mesmerizing! (∩˃o˂∩)❤️ 🐺",  
+  "So radiant and beautiful ε(´｡•᎑•`)っ 💕 🐺",  
+  " very charming 😍💛 🐺",  
+  "(∩˃o˂∩)❤️✨super cuteeeee 🐺",  
+  "꒰ঌ😇👌໒꒱ perfect 🐺",  
+  "very cute 🥰 🥰 🐺",  
+  "absolutely adorable 🐺"
+];
 
     console.log("Collected profile URLs:", profileUrls);
     
