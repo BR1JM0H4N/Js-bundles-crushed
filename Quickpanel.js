@@ -4,6 +4,30 @@
 
 (function() { 
 
+    // ---- WAKE LOCK FN ----
+
+let wakeLock = null;
+
+async function acquireWakeLock() {
+  try {
+    wakeLock = await navigator.wakeLock.request("screen");
+    console.log("Wake Lock acquired");
+
+    wakeLock.addEventListener("release", () => {
+      console.log("Wake Lock released");
+    });
+  } catch (err) {
+    console.error(`${err.name}: ${err.message}`);
+  }
+}
+
+async function releaseWakeLock() {
+  if (wakeLock) {
+    await wakeLock.release();
+    wakeLock = null;
+  }
+}
+    
     // --- CONFIGURATION ---
     let profileUrls = [
         "https://creator.nightcafe.studio/u/Sabaku_Neko",
@@ -128,7 +152,7 @@
     document.body.appendChild(scraperContainer);
 
     let collectedHrefs = [];
-
+acquireWakeLock();
     // --- STEP 3: SCRAPER LOGIC ---
     function scrapeProfile(profileIndex) {
         if (profileIndex >= profileUrls.length) {
@@ -170,7 +194,7 @@
             }, 5000);
         };
     }
-
+releaseWakeLock();
     // --- STEP 4: VIEWER + COMMENTER LOGIC ---
     function openViewerWithComments(links) {
         if(links.length === 0) {
