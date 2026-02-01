@@ -404,6 +404,56 @@ releaseWakeLock();
     }
 
     // Start execution
-    scrapeProfile(0);
+        // --- PATCH: USER SELECTION UI ---
+    function showUserSelection(urls, callback) {
+        const selectionOverlay = document.createElement("div");
+        selectionOverlay.style = `
+            position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+            background: rgba(0,0,0,0.85); z-index: 1000002;
+            display: flex; justify-content: center; align-items: center;
+            font-family: sans-serif;
+        `;
+
+        const modal = document.createElement("div");
+        modal.style = "background: #fff; padding: 20px; border-radius: 12px; width: 400px; max-height: 80vh; overflow-y: auto; color: #333;";
+        modal.innerHTML = `<h3 style="margin-top:0">Select Profiles to Scrape</h3>
+                           <div style="margin-bottom:10px;">
+                             <button id="selAll" style="padding:4px 8px; cursor:pointer;">Select All</button>
+                             <button id="deselAll" style="padding:4px 8px; cursor:pointer;">Deselect All</button>
+                           </div>
+                           <div id="urlList"></div>
+                           <button id="startScrape" style="width:100%; margin-top:15px; padding:12px; background:#28a745; color:white; border:none; border-radius:6px; font-weight:bold; cursor:pointer;">Start Scraping Selected</button>`;
+
+        const listContainer = modal.querySelector("#urlList");
+        urls.forEach((url, i) => {
+            const name = url.split('/').pop();
+            const item = document.createElement("div");
+            item.style = "padding: 5px 0; border-bottom: 1px solid #eee; display: flex; align-items: center;";
+            item.innerHTML = `<input type="checkbox" id="user_${i}" checked value="${url}" style="margin-right:10px;">
+                              <label for="user_${i}" style="cursor:pointer; flex-grow:1;">${name}</label>`;
+            listContainer.appendChild(item);
+        });
+
+        selectionOverlay.appendChild(modal);
+        document.body.appendChild(selectionOverlay);
+
+        // Utility Buttons
+        modal.querySelector("#selAll").onclick = () => modal.querySelectorAll('input').forEach(i => i.checked = true);
+        modal.querySelector("#deselAll").onclick = () => modal.querySelectorAll('input').forEach(i => i.checked = false);
+
+        modal.querySelector("#startScrape").onclick = () => {
+            const selected = Array.from(modal.querySelectorAll('input:checked')).map(i => i.value);
+            if (selected.length === 0) return alert("Select at least one user!");
+            document.body.removeChild(selectionOverlay);
+            callback(selected);
+        };
+    }
+
+    // --- REPLACED START EXECUTION ---
+    showUserSelection(profileUrls, (filteredUrls) => {
+        profileUrls = filteredUrls; // Overwrite global list with chosen ones
+        scrapeProfile(0);
+    });
+    
 
 })();
